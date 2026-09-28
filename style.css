@@ -1,0 +1,65 @@
+/* 곰신로그 공개 페이지. 외부 글꼴·스크립트 없이 시스템 글꼴만 쓴다. */
+:root {
+  --bg: #ffffff;
+  --surface: #f6f4f2;
+  --text: #1f1d1b;
+  --muted: #5f5a55;
+  --border: #e6e1dc;
+  --accent: #c2553f;
+  --accent-text: #ffffff;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151413;
+    --surface: #211f1d;
+    --text: #f2efec;
+    --muted: #b3aca5;
+    --border: #36322f;
+    --accent: #f08a74;
+    --accent-text: #1b0f0b;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+.site-header, main, .site-footer { max-width: 720px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+.site-header { display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid var(--border); }
+.brand { font-weight: 700; color: var(--text); text-decoration: none; font-size: 17px; }
+.back { font-size: 15px; }
+main { padding-top: 24px; padding-bottom: 40px; }
+h1 { font-size: 26px; line-height: 1.35; margin: 8px 0 12px; }
+h2 { font-size: 19px; line-height: 1.4; margin: 28px 0 8px; }
+h3 { font-size: 16px; margin: 0 0 4px; }
+ul { padding-left: 20px; margin: 0; }
+li { margin: 6px 0; color: var(--muted); }
+li::marker { color: var(--accent); }
+p { margin: 8px 0; }
+.meta, .notice { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; color: var(--muted); font-size: 14px; }
+.tagline { font-size: 18px; color: var(--muted); margin-top: 0; }
+.card { border: 1px solid var(--border); border-radius: 14px; padding: 4px 16px 12px; margin: 16px 0; }
+.card h2 { margin-top: 14px; }
+.card.muted { background: var(--surface); }
+.row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; background: var(--surface); border-radius: 10px; padding: 10px 12px; font-size: 15px; }
+.row span { color: var(--muted); }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; width: 100%; border-radius: 10px; background: var(--accent); color: var(--accent-text); font-weight: 600; text-decoration: none; padding: 0 16px; }
+.small { font-size: 14px; color: var(--muted); }
+.faq { border: 1px solid var(--border); border-radius: 10px; padding: 12px; margin: 8px 0; }
+.faq p { color: var(--muted); margin: 0; }
+.links { display: flex; flex-direction: column; gap: 8px; }
+.links a { display: flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--border); border-radius: 10px; color: var(--text); text-decoration: none; }
+.contact { margin-top: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; font-size: 15px; }
+.contact-title { font-weight: 600; margin: 0 0 4px; }
+.site-footer { border-top: 1px solid var(--border); padding-top: 16px; padding-bottom: 32px; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 14px; }
+.site-footer a { color: var(--muted); display: inline-flex; min-height: 44px; align-items: center; }
